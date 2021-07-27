@@ -15,7 +15,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() {
-        DriverFactory.createInstance("chrome");
+        DriverFactory.createInstance("edge");
         driver = DriverFactory.getInstance();
         driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
     }
