@@ -1,5 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Project Name : sample-testing
@@ -22,6 +24,8 @@ public class SearchResultPage {
     }
 
     public String getSearchResultName() {
+        WebDriverWait wait=new WebDriverWait(driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultName));
         return driver.findElement(searchResultName).getText().trim();
     }
 
